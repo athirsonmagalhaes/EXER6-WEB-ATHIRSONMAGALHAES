@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+</head>
+<body>
+    <h1>Bem-vindo!</h1>
+    <p>Digite seu nome</p>
+    <input id="nome" type="text" placeholder="Seu nome">
+    <button id="btn" onclick="clicou()">Clique aqui</button>
+    <p id="msg"></p>
+
+    <script>
+        function clicou() {
+            let inputNome = document.getElementById("nome")
+            let nome = inputNome.value
+            let msg = document.getElementById("msg")
+
+            if (nome == "") {
+                msg.innerHTML = ""
+                msg.innerHTML += "Por favor, insira um nome."
+                
+            } else {
+                msg.innerHTML = ""
+                msg.innerHTML += `Olá, ${nome}! Seja bem-vindo à página do Athirson.`
+            }
+        }
+        
+    </script>
+</body>
+</html>

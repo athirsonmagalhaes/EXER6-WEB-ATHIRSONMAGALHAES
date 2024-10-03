@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <h1>Gerador de Lista</h1>
+    <input  id="numero" type="number">
+    <button onclick="clicou()">Gerar lista</button>
+    <ul id="lista"></ul>
+
+    <script>
+        function clicou(){
+            let num = document.getElementById("numero")
+            let numero = num.value
+            let lista = document.getElementById("lista")
+            
+
+            if (numero == '' || numero <= 0) {
+                lista.innerHTML = ""
+                let itemLista = document.createElement("li")
+                itemLista.innerHTML += "Digite um número válido."
+                lista.appendChild(itemLista)
+                
+            } else {
+                lista.innerHTML = ""
+                
+                let i = 0
+                while (i < numero) {
+                    let itemLista = document.createElement("li")
+                    itemLista.innerHTML += "Athirson " + (i+1) 
+                    lista.appendChild(itemLista)
+                    i++
+                }
+            }
+        }
+    </script>
+</body>
+</html>
